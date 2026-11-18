@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="tr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <title>Solitword Mini</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <main class="app">
+      <header class="bar">
+        <button id="menu-button" class="icon-button" type="button" aria-label="Menü">☰</button>
+        <h1 id="level-title" class="bar-title">Solitword</h1>
+        <p class="bar-score"><span aria-hidden="true">⭐</span> <span class="unseen">Puan</span> <span id="score">0</span></p>
+      </header>
+      <section id="table" class="table" aria-label="Oyun masası"></section>
+      <aside id="coach" class="coach" aria-label="Öğretici" hidden>
+        <p id="coach-text" class="coach-text" role="status" aria-live="polite"></p>
+        <p class="coach-foot">
+          <span id="coach-step" class="coach-step"></span>
+          <button id="coach-skip" class="coach-skip" type="button">Öğreticiyi geç</button>
+        </p>
+      </aside>
+      <p id="toast" class="toast" role="status" aria-live="polite"></p>
+    </main>
+    <div id="sheet" class="sheet" hidden></div>
+    <div id="splash" class="splash">
+      <span class="app-icon splash-icon" aria-hidden="true"></span>
+      <p class="wordmark splash-name"><span class="wordmark-solit">Solit</span><span class="wordmark-word">word</span></p>
+      <p class="splash-note">Yükleniyor</p>
+    </div>
+    <script type="module" src="./screen.ts"></script>
+  </body>
+</html>
